@@ -1,0 +1,180 @@
+extends ../_template
+
+block variables
+	- var title = 'Blog page'
+
+block content
+	.preloader
+		.preloader__spinner
+			.preloader__animation
+			.preloader__percents
+				|0%
+	.wrapper.wrapper_for_blog
+		.fullscreen-menu
+			.fullscreen-menu__section.fullscreen-menu__section_left
+			.fullscreen-menu__section.fullscreen-menu__section_right
+			ul.fullscreen-menu__list
+				li.fullscreen-menu__item
+					a.fullscreen-menu__link(href='works.html')
+						+title__small('Мои работы', 'title__small_fullscreen_menu')
+				li.fullscreen-menu__item
+					a.fullscreen-menu__link(href='about.html')
+						+title__small('Обо мне', 'title__small_fullscreen_menu')
+				li.fullscreen-menu__item
+					a.fullscreen-menu__link.active(href='blog.html')
+						+title__small('Блог', 'title__small_fullscreen_menu')
+				li.fullscreen-menu__item
+					a.fullscreen-menu__link(href='index.html')
+						+title__small('Авторизация', 'title__small_fullscreen_menu')
+		.header.header__blog
+			.header__bg
+				img.header__bg-image(src='assets/img/mountains.jpg')
+			.header__input
+				.blog__container
+					.header-up
+						.header-up__left
+							.socials.socials_place_header
+								ul.socials__list.socials__list_color_white
+									li.socials__item
+										a.socials__link(href='https://vk.com/julia_yakutik', target='_blank')
+											i.fa.fa-vk(aria-hidden='true')
+									li.socials__item
+										a.socials__link(href='https://github.com/YuliyaYakutsik', target='_blank')
+											i.fa.fa-github-alt(aria-hidden='true')
+									li.socials__item
+										a.socials__link(href='https://www.linkedin.com/in/yuliya-yakutsik-b10aa4139/', target='_blank')
+											i.fa.fa-linkedin(aria-hidden='true')
+						.header-up__right
+							.burger-menu
+								a.burger-menu__link(href='#')
+									span.burger-menu__link-center
+				.header__description
+					.user.user_position_header
+						.user__photo.user__photo_small
+							img.user__pic(src='assets/img/ava.jpg', alt='Ava')
+						.header__name
+							.subtitle Блог
+							.header__name-shade
+								svg.header__name-shade-pic
+									use(xlink:href='assets/img/sprite.svg#blog_header')
+						.user__description.user__description_color_white Статьи, которые я написал
+		section.section-blog
+			svg(
+				viewbox="0 0 1000 90"
+				preserveAspectRatio="none"
+				class="triangle triangle_fill_bg works__triangles")
+				polygon(points="0,0 0,90 500.8,90")
+				polygon(points="1000,90 500,90 1000,0")
+			.container
+				.nav-blog
+					.nav-blog__toggle
+						a.nav-blog__toggle-link(href='#')
+					ul.nav-blog__list
+						li.nav-blog__item.active
+							a.nav-blog__link(href='#one')
+								|Самое важное в SASS
+						li.nav-blog__item
+							a.nav-blog__link(href='#two')
+								|Приёмы в вёрстке, без которых не обходится ни один сайт
+						li.nav-blog__item
+							a.nav-blog__link(href='#three')
+								|Самый необходимый набор Gulp плагинов
+				.content-blog
+					ul.content-blog__list
+						li.content-blog__item(data-section="one")
+							.content-blog__item-main
+								.content-blog__item-title
+									|Самое важное в SASS
+								.content-blog__item-date
+									|22 ноября 2016
+								.content-blog__item-text
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+							.content-blog__item-code
+								ul.content-blog__item-code-list
+									li.content-blog__item-code-item 
+										|1
+									li.content-blog__item-code-item 
+										|2
+									li.content-blog__item-code-item 
+										|3
+									li.content-blog__item-code-item 
+										|4
+									li.content-blog__item-code-item 
+										|5
+								pre.content-blog__item-code-data
+									p.content-blog__item-code-datatext
+										|//присвоить
+										|$(document).data(#[span.content-blog__item-code-data_green 'prop'], {anything: #[span.content-blog__item-code-data_green "любой объект"]})
+										|
+										|//присвоить
+										|$(document).data(#[span.content-blog__item-code-data_green 'prop'], {anything: #[span.content-blog__item-code-data_green "любой объект"]})
+						li.content-blog__item(data-section="two")
+							.content-blog__item-main
+								.content-blog__item-title
+									|Приёмы в вёрстке, без которых не обходится ни один сайт
+								.content-blog__item-date
+									|22 ноября 2016
+								.content-blog__item-text
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+						li.content-blog__item(data-section="three")
+							.content-blog__item-main
+								.content-blog__item-title
+									|Самый необходимый набор Gulp плагинов
+								.content-blog__item-date
+									|22 ноября 2016
+								.content-blog__item-text
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+									|Lorem ipsum dolor sit amet, consectetur |adipisicing elit. Pariatur fuga voluptatum |sequi quis, blanditiis facilis, in id |labore officiis officia placeat, culpa |dolorum cum quas eaque dolore soluta iste |maiores doloribus omnis voluptate. Sapiente |temporibus ratione facilis doloribus enim |reiciendis porro a earum animi cum, ipsa |omnis cumque dolore excepturi?
+	footer.footer__pages
+		.footer-up
+			.footer-up__left
+				ul.footer-up__list
+					li.footer-up__item
+						a.footer-up__link(href="works.html")
+							|Мои работы
+					li.footer-up__item
+						a.footer-up__link(href="about.html")
+							|Обо мне
+					li.footer-up__item
+						a.footer-up__link.footer-up__link_active(href="blog.html")
+							|Блог
+					li.footer-up__item
+						a.footer-up__link(href="index.html")
+							|Авторизация
+			.footer-up__right
+				.socials.socials_place_footer
+					ul.socials__list.socials__list_border_circle
+						li.socials__item
+							a.socials__link(href='https://vk.com/julia_yakutik', target='_blank')
+								i.fa.fa-vk(aria-hidden='true')
+						li.socials__item
+							a.socials__link(href='https://github.com/YuliyaYakutsik', target='_blank')
+								i.fa.fa-github-alt(aria-hidden='true')
+						li.socials__item
+							a.socials__link(href='https://www.linkedin.com/in/yuliya-yakutsik-b10aa4139/', target='_blank')
+								i.fa.fa-linkedin(aria-hidden='true')
+		.footer-down
+			.footer-down__left
+				.footer__description
+					|Я веб-разработчик из Минска и этот сайт сделала в рамках обучения в Школе онлайн-образования Loftschool.
+			.footer-down__right
+				.copyright.copyright_position_left
+					i.fa.fa-copyright(aria-hidden='true')
+					|  Юлия Якутик | Создано с любовью в Loftschool | 2017
+
+

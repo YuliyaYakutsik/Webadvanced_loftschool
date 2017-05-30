@@ -1,0 +1,166 @@
+extends ../_template
+
+block variables
+	- var title = 'About page'
+
+block scripts
+	script(async,defer,src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAKpRZU0C-xlSQxjWMGh9wJm76UKczr9lU')
+
+block content
+	.preloader
+		.preloader__spinner
+			.preloader__animation
+			.preloader__percents
+				|0%
+	.wrapper_with_footer
+		.fullscreen-menu
+			.fullscreen-menu__section.fullscreen-menu__section_left
+			.fullscreen-menu__section.fullscreen-menu__section_right
+			ul.fullscreen-menu__list
+				li.fullscreen-menu__item
+					a.fullscreen-menu__link(href='works.html')
+						+title__small('Мои работы', 'title__small_fullscreen_menu')
+				li.fullscreen-menu__item
+					a.fullscreen-menu__link.active(href='about.html')
+						+title__small('Обо мне', 'title__small_fullscreen_menu')
+				li.fullscreen-menu__item
+					a.fullscreen-menu__link(href='blog.html')
+						+title__small('Блог', 'title__small_fullscreen_menu')
+				li.fullscreen-menu__item
+					a.fullscreen-menu__link(href='index.html')
+						+title__small('Авторизация', 'title__small_fullscreen_menu')
+		.header
+			.header__bg
+				img.header__bg-image(src='assets/img/mountains.jpg')
+			.header__input
+				.pages__container
+					.header-up
+						.header-up__left
+							.socials.socials_place_header
+								ul.socials__list.socials__list_color_white
+									li.socials__item
+										a.socials__link(href='https://vk.com/julia_yakutik', target='_blank')
+											i.fa.fa-vk(aria-hidden='true')
+									li.socials__item
+										a.socials__link(href='https://github.com/YuliyaYakutsik', target='_blank')
+											i.fa.fa-github-alt(aria-hidden='true')
+									li.socials__item
+										a.socials__link(href='https://www.linkedin.com/in/yuliya-yakutsik-b10aa4139/', target='_blank')
+											i.fa.fa-linkedin(aria-hidden='true')
+						.header-up__right
+							.burger-menu
+								a.burger-menu__link(href='#')
+									span.burger-menu__link-center
+				.header__description
+					img(src="assets/img/portfolio-header.png", alt="").header__title-img
+					.user.user_position_header
+						.user__photo.user__photo_small
+							img.user__pic(src='assets/img/ava.jpg', alt='Ava')
+						.user__name.user__name_color_white Юлия Якутик
+						.user__description.user__description_color_white Личный сайт веб-разработчика
+				a(href="").down-arrow
+					i.fa.fa-chevron-down(aria-hidden='true')
+		section.section.about.section_to_scroll
+			svg(
+				viewbox="0 0 1000 90"
+				preserveAspectRatio="none"
+				class="triangle triangle_fill_white about__triangles about__triangles_device_tablets")
+				polygon(points="0,0 0,90 500.8,90")
+				polygon(points="1000,90 500,90 1000,0")
+			.about__left
+				svg(
+					viewbox="0 0 1000 180"
+					preserveAspectRatio="none"
+					class="triangle triangle_fill_white about__triangles")
+					polygon(points="0,0 0,180 1000,180")
+				+title('Обо мне', 'about-header.png', 'about__section-title')
+				.user-about.about__section-description_inline
+					.user-about__photo
+						img.user-about__pic(src='assets/img/about.jpg', alt='Ava-big')
+					.user-about__title
+						+title__small('Кто я', 'about__section-title_small')
+					.user-about__text
+						p Я веб разработчик из Минска. Мне 23 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+						p Сейчас я нахожусь в самом начале своего пути в сфере IT. Поэтому стараюсь постоянно развиваться и изучать что-то новое. Буду очень рада, если вы захотите со мной сотрудничать! С моей стороны - полная отдача и желание все сделать так, как Вы захотите!
+			.about__right
+				svg(
+					viewbox="0 0 1000 180"
+					preserveAspectRatio="none"
+					class="triangle triangle_fill_beige about__triangles")
+					polygon(points="0,180 1000,180 1000,0")
+				.about-data
+					.about-data__description.about-user-info
+						.about-user-info__title
+							+title__small('Чем я могу быть вам полезен', 'about__section-title_small')
+						.about-user-info__text
+							p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать сложные задачи на Backend. Но давайте по порядку.
+						ul.skills
+							each skill in skills
+								each skillsArray, skillName in skill
+									li.skills__item
+										.skill-section
+											.skill-section__title= skillName
+											ul.skill-section__list
+												each line in skillsArray
+													each skillValue, skillTitle in line
+														li.skills-section__item
+															.skill
+																svg.skill__circle(viewbox='0 0 110 110')
+																	circle.skill__circle-first(r='45', cx='50%', cy='50%')
+																	circle(class=`skill__circle-second circle-${skillValue}` r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+																.skill__name= skillTitle
+		section.section.map.last
+			.contacts.information
+				+title__small('Контакты', 'about__section-title_small')
+				.contacts-socials
+					ul.contacts-socials__list
+						li.contacts-socials__item
+							i.fa.fa-skype.contacts-socials__icon(aria-hidden='true') 
+							.contacts-socials__text Yuliya Yakutsik
+						li.contacts-socials__item
+							i.fa.fa-envelope.contacts-socials__icon(aria-hidden='true') 
+							.contacts-socials__text juliayakutik@gmail.com
+						li.contacts-socials__item
+							i.fa.fa-phone.contacts-socials__icon(aria-hidden='true')
+							.contacts-socials__text +375 29 178 90 10
+						li.contacts-socials__item
+							i.fa.fa-map-marker.contacts-socials__icon(aria-hidden='true')
+							.contacts-socials__text г.Минск
+			#map
+			footer.footer.footer_margin_top
+				.footer-up
+					.footer-up__left
+						ul.footer-up__list
+							li.footer-up__item
+								a.footer-up__link(href="works.html")
+									|Мои работы
+							li.footer-up__item
+								a.footer-up__link.footer-up__link_active(href="about.html")
+									|Обо мне
+							li.footer-up__item
+								a.footer-up__link(href="blog.html")
+									|Блог
+							li.footer-up__item
+								a.footer-up__link(href="index.html")
+									|Авторизация
+					.footer-up__right
+						.socials.socials_place_footer
+							ul.socials__list.socials__list_border_circle
+								li.socials__item
+									a.socials__link(href='https://vk.com/julia_yakutik', target='_blank')
+										i.fa.fa-vk(aria-hidden='true')
+								li.socials__item
+									a.socials__link(href='https://github.com/YuliyaYakutsik', target='_blank')
+										i.fa.fa-github-alt(aria-hidden='true')
+								li.socials__item
+									a.socials__link(href='https://www.linkedin.com/in/yuliya-yakutsik-b10aa4139/', target='_blank')
+										i.fa.fa-linkedin(aria-hidden='true')
+				.footer-down
+					.footer-down__left
+						.footer__description
+							|Я веб-разработчик из Минска и этот сайт сделала в рамках обучения в Школе онлайн-образования Loftschool.
+					.footer-down__right
+						.copyright.copyright_position_left
+							i.fa.fa-copyright(aria-hidden='true')
+							|  Юлия Якутик | Создано с любовью в Loftschool | 2017
+	

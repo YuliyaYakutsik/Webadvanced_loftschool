@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Main page</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="parallax">
+      <div class="parallax__layer" style="background-image: url(&quot;assets/img/Layer-9.png&quot;);"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-8.png');"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-7.png');"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-6a.png');"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-6.png');"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-4.png');"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-3.png');"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-2.png');"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-1.png');"></div>
+      <div class="parallax__layer" style="background-image: url('assets/img/Layer-0.png');"></div>
+    </div>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation"></div>
+        <div class="preloader__percents">0%</div>
+      </div>
+    </div>
+    <div class="wrapper wrapper_background">
+      <div class="flipper-container">
+        <div class="flipper">
+          <div class="content content_flipper_front">
+            <div class="content__index">
+              <div class="user">
+                <div class="user__author">
+                  <div class="user__photo"><img class="user__pic" src="assets/img/ava.jpg" alt="Ava"></div>
+                  <div class="user__name">Юлия Якутик</div>
+                  <div class="user__description">Личный сайт веб разработчика</div>
+                </div>
+              </div>
+              <div class="socials socials_place_main">
+                <ul class="socials__list socials__list_color_green">
+                  <li class="socials__item"><a class="socials__link" href="https://vk.com/julia_yakutik" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                  <li class="socials__item"><a class="socials__link" href="https://github.com/YuliyaYakutsik" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+                  <li class="socials__item"><a class="socials__link" href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav">
+              <ul class="nav__list">
+                <li class="nav__item nav__item-big"><a class="nav__link" href="works.html">Мои работы</a></li>
+                <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="content content_flipper_back">
+            <div class="content__index content__index_flipper_back">
+              <form class="authorization__form" method="POST">
+                <div class="title__small title__small_flipper_back">Авторизуйтесь</div>
+                <div class="authorization__form-inputs">
+                  <label class="authorization__form-block">
+                    <div class="authorization__form-block-wrapper">
+                      <div class="authorization__form-label"><i class="fa fa-user" aria-hidden="true"></i></div>
+                      <input class="authorization__form-input authorization__form-element" name="user" type="text" placeholder="Логин">
+                    </div>
+                  </label>
+                  <label class="authorization__form-block">
+                    <div class="authorization__form-block-wrapper">
+                      <div class="authorization__form-label"><i class="fa fa-key" aria-hidden="true"></i></div>
+                      <input class="authorization__form-input authorization__form-element" name="password" type="password" placeholder="Пароль">
+                    </div>
+                  </label>
+                  <div class="authorization__form-checkbox-wrapper">
+                    <input class="authorization__form-checkbox" type="checkbox" name="human" id="human">
+                    <label class="authorization__form-checkbox-label" for="human">Я человек</label>
+                  </div>
+                  <div class="authorization__form-question">Вы точно не робот?</div>
+                  <div class="authorization__form-radio-wrapper">
+                    <input class="radio" type="radio" name="answer" value="yes" id="yes">
+                    <label class="radio-label radio-label_first" for="yes">Да</label>
+                    <input class="radio" type="radio" name="answer" value="no" id="no">
+                    <label class="radio-label" for="no">Не уверен</label>
+                  </div>
+                </div>
+                <div class="authorization__form-buttons"><a class="authorization__form-button authorization__form-button_back" href="#">На главную</a>
+                  <input class="authorization__form-button" name="" type="submit" value="Войти">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="authorization">
+      <div class="authorization__button"><a class="authorization__link" href="#">Авторизоваться</a></div>
+    </div>
+    <footer class="footer">
+      <div class="copyright"><i class="fa fa-copyright" aria-hidden="true"></i> Юлия Якутик | Создано с любовью в Loftschool | 2017</div>
+    </footer>
+  </body>
+</html>

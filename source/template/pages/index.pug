@@ -1,0 +1,95 @@
+extends ../_template
+
+block variables
+	- var title = 'Main page'
+
+block content
+	.parallax
+		.parallax__layer(style='background-image: url("assets/img/Layer-9.png")')
+		.parallax__layer(style="background-image: url('assets/img/Layer-8.png');")
+		.parallax__layer(style="background-image: url('assets/img/Layer-7.png');")
+		.parallax__layer(style="background-image: url('assets/img/Layer-6a.png');")
+		.parallax__layer(style="background-image: url('assets/img/Layer-6.png');")
+		.parallax__layer(style="background-image: url('assets/img/Layer-4.png');")
+		.parallax__layer(style="background-image: url('assets/img/Layer-3.png');")
+		.parallax__layer(style="background-image: url('assets/img/Layer-2.png');")
+		.parallax__layer(style="background-image: url('assets/img/Layer-1.png');")
+		.parallax__layer(style="background-image: url('assets/img/Layer-0.png');")
+	.preloader
+		.preloader__spinner
+			.preloader__animation
+			.preloader__percents
+				|0%
+	.wrapper.wrapper_background
+		.flipper-container
+			.flipper
+				.content.content_flipper_front
+					.content__index
+						.user
+							.user__author
+								.user__photo
+									img.user__pic(src='assets/img/ava.jpg', alt='Ava')
+								.user__name Юлия Якутик
+								.user__description Личный сайт веб-разработчика
+						.socials.socials_place_main
+							ul.socials__list.socials__list_color_green
+								li.socials__item
+									a.socials__link(href='https://vk.com/julia_yakutik', target='_blank')
+										i.fa.fa-vk(aria-hidden='true')
+								li.socials__item
+									a.socials__link(href='https://github.com/YuliyaYakutsik', target='_blank')
+										i.fa.fa-github-alt(aria-hidden='true')
+								li.socials__item
+									a.socials__link(href='https://www.linkedin.com/in/yuliya-yakutsik-b10aa4139/', target='_blank')
+										i.fa.fa-linkedin(aria-hidden='true')
+					.nav
+						ul.nav__list
+							li.nav__item.nav__item-big
+								a.nav__link(href='works.html')
+									| Мои работы
+							li.nav__item
+								a.nav__link(href='about.html')
+									| Обо мне
+							li.nav__item
+								a.nav__link(href='blog.html')
+									| Блог
+				.content.content_flipper_back
+					.content__index.content__index_flipper_back
+						form.authorization__form#login(method="POST")
+							+title__small('Авторизуйтесь', 'title__small_flipper_back')
+							.status.reviews__form-status
+							.authorization__form-inputs
+								label.authorization__form-block
+									.authorization__form-block-wrapper
+										.authorization__form-label
+											i.fa.fa-user(aria-hidden='true')
+										input.authorization__form-input.authorization__form-element(name="user", type="text", placeholder='Логин')
+								label.authorization__form-block
+									.authorization__form-block-wrapper
+										.authorization__form-label
+											i.fa.fa-key(aria-hidden='true')
+										input.authorization__form-input.authorization__form-element(name="password", type="password", placeholder='Пароль')
+								.authorization__form-checkbox-wrapper
+									input(type="checkbox", name="human", id="human", class="authorization__form-checkbox")
+									label(for="human", class="authorization__form-checkbox-label")
+										|Я человек
+								.authorization__form-question
+									|Вы точно не робот?
+								.authorization__form-radio-wrapper
+									input(class="radio", type="radio", name="answer", value="yes", id="yes")
+									label(class="radio-label radio-label_first", for="yes")
+										|Да
+									input(class="radio", type="radio", name="answer", value="no", id="no")
+									label(class="radio-label",for="no")
+										|Не уверен
+							.authorization__form-buttons
+								a.authorization__form-button.authorization__form-button_back(href='#')
+									|На главную
+								input.authorization__form-button(name="", type="submit", value="Войти")
+	.authorization
+		.authorization__button
+			a.authorization__link(href='#') Авторизоваться
+	footer.footer
+		.copyright
+			i.fa.fa-copyright(aria-hidden='true')
+			|  Юлия Якутик | Создано с любовью в Loftschool | 2017

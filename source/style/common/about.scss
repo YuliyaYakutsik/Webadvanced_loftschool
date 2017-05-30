@@ -1,0 +1,805 @@
+.about {
+  @extend %clearfix;
+  color: $main-font-color;
+  display: flex;
+  position: relative;
+
+  @include tablets{
+    flex-direction: column;
+  }
+
+}
+
+.about__left, .about__right {
+  position: relative;
+  padding-top: 20px;
+  min-width: 50%;
+}
+
+.about__left {
+  background: $white;
+  padding-bottom: 135px;
+  padding-right: 18px;
+  padding-left: 15px;
+  display: flex;
+
+  @include laptop{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include tablets{
+    padding-bottom: 20px;
+  }
+  
+  .about__triangles{
+    left: 0;
+  }
+}
+
+.about__right {
+  background: $beige;
+  padding: 0 20px 30px 30px;
+
+  .about__triangles{
+    right: 0;
+  }
+
+}
+
+.about__triangles {
+  position: absolute;
+  bottom: 100%;
+
+  @include tablets{
+    display: none;
+  }
+}
+
+.about__triangles_device_tablets{
+  left: 0;
+  display: none;
+
+  @include tablets{
+    display: block;
+  }
+}
+
+.triangle {
+  width: 100%;
+
+  &_fill {
+
+    &_white {
+      fill: $white;
+    }
+
+    &_beige {
+      fill: $beige;
+    }
+
+    &_bg {
+      fill: $bg;
+    }
+
+  }
+}
+
+.down-arrow {
+  bottom: 65px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(#fff, .55);
+  font-size: 32px;
+  z-index: 20;
+  transition: $transition;
+  
+  &:hover{
+    color: #fff;
+  }
+}
+
+.title {
+  font-family: 'bernier_regularregular', Arial, sans-serif;
+  font-size: 63px;
+  padding: 45px 80px;
+  display: inline-block;
+  position: relative;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  color: #373e42;
+  text-transform: uppercase;
+
+  $margin : 40px;
+
+  &:after, &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 88px;
+    background: rgba(#373e42, .2);
+    width: 22px;
+    height: 5px;
+  }
+
+  &:after {
+    right: $margin;
+  }
+
+  &:before {
+    left: $margin;
+  }
+
+}
+
+.about__section-title{
+  align-self: flex-start;
+  max-width: 50%;
+  margin-top: -50px;
+
+  @include laptop{
+    align-self: center;
+    max-width: 100%;
+  }
+
+  @include tablets{
+    margin-top: 0;
+  }
+}
+
+.works__section-title{
+  @include phones{
+    font-size: 58px;
+  }
+
+  &:before{
+    top:85px;
+  }
+
+  &:after{
+    top:85px;
+  }
+}
+
+.about__section-description_inline{
+  text-align: left;
+  padding-top: 20px;
+  max-width: 462px;
+  flex:1;
+  margin-left: 15px;
+}
+
+.user-about__photo{
+  width: 100%;
+  display: inline-block;
+}
+
+.user-about__pic{
+  width: 100%;
+  display: block;
+}
+
+.user-about__title{
+  text-align: center;
+}
+
+.about-data{
+
+  @include tablets{
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+}
+
+.title__small{
+  font-family: 'bernier_regularregular', Arial, sans-serif;
+  font-size: 35px;
+  padding: 25px 80px;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  max-width: 290px+160px;
+
+  $margin : 40px;
+
+  &:after, &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 46px;
+    background: rgba($main-font-color, .2);
+    width: 22px;
+    height: 5px;
+
+    @include tablets{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  }
+
+  &:after {
+    right: $margin;
+  }
+
+  &:before {
+    left: $margin;
+  }
+
+  &_flipper_back{
+    @include album{
+      padding: 10px 80px;
+    }
+  }
+}
+
+.title__small_fullscreen_menu{
+  color: rgba(#fff, .7);
+  font-size: 50px;
+  padding: 22px 80px;
+  transition: $transition;
+
+  @include album{
+    padding: 5px 80px;
+    font-size: 42px;
+  }
+
+  &:after, &:before {
+    top: 56px;
+    background: rgba(#fff, .7);
+    transition: $transition;
+
+    @include album{
+    top: 31px;
+  }
+  }
+
+}
+
+.user-about__text{
+  font-family: 'robotoregular', Arial, sans-serif;
+  font-size: 16px;
+
+  p{
+    margin-bottom: 10px;
+  }
+}
+
+.about-user-info__text{
+  text-align: left;
+  margin-bottom: 30px;
+  font-family: 'robotoregular', Arial, sans-serif;
+  font-size: 16px;
+
+  @include tablets{
+    text-align: center;
+    max-width: 462px;
+    margin: 0 auto 30px;
+  }
+
+}
+
+.skills{
+  text-align: left;
+
+  @include tablets{
+    text-align: center;
+  }
+}
+
+.skills__item{
+  margin-bottom: 20px;
+}
+
+.skill-section__list{
+  margin-left: -20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablets{
+    justify-content: center;
+  }
+}
+
+.skills-section__item{
+  width: 120px;
+  margin-left: 20px;
+}
+
+.skill-section__title{
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.skill{
+  position: relative;
+  cursor: default;
+
+  &.active{
+    .circle-0 {
+      stroke-dasharray: 0 282.6;
+      opacity: .1;
+    }
+    .circle-1 {
+      stroke-dasharray: 2.83 282.6;
+      opacity: .1;
+    }
+    .circle-2 {
+      stroke-dasharray: 5.65 282.6;
+      opacity: .1;
+    }
+    .circle-3 {
+      stroke-dasharray: 8.48 282.6;
+      opacity: .1;
+    }
+    .circle-4 {
+      stroke-dasharray: 11.30 282.6;
+      opacity: .1;
+    }
+    .circle-5 {
+      stroke-dasharray: 14.13 282.6;
+      opacity: .1;
+    }
+    .circle-6 {
+      stroke-dasharray: 16.96 282.6;
+      opacity: .1;
+    }
+    .circle-7 {
+      stroke-dasharray: 19.78 282.6;
+      opacity: .1;
+    }
+    .circle-8 {
+      stroke-dasharray: 22.61 282.6;
+      opacity: .1;
+    }
+    .circle-9 {
+      stroke-dasharray: 25.43 282.6;
+      opacity: .1;
+    }
+    .circle-10 {
+      stroke-dasharray: 28.26 282.6;
+      opacity: .1;
+    }
+    .circle-11 {
+      stroke-dasharray: 31.09 282.6;
+      opacity: .11;
+    }
+    .circle-12 {
+      stroke-dasharray: 33.91 282.6;
+      opacity: .12;
+    }
+    .circle-13 {
+      stroke-dasharray: 36.74 282.6;
+      opacity: .13;
+    }
+    .circle-14 {
+      stroke-dasharray: 39.56 282.6;
+      opacity: .14;
+    }
+    .circle-15 {
+      stroke-dasharray: 42.39 282.6;
+      opacity: .15;
+    }
+    .circle-16 {
+      stroke-dasharray: 45.22 282.6;
+      opacity: .16;
+    }
+    .circle-17 {
+      stroke-dasharray: 48.04 282.6;
+      opacity: .17;
+    }
+    .circle-18 {
+      stroke-dasharray: 50.87 282.6;
+      opacity: .18;
+    }
+    .circle-19 {
+      stroke-dasharray: 53.69 282.6;
+      opacity: .19;
+    }
+    .circle-20 {
+      stroke-dasharray: 56.52 282.6;
+      opacity: .2;
+    }
+    .circle-21 {
+      stroke-dasharray: 59.35 282.6;
+      opacity: .21;
+    }
+    .circle-22 {
+      stroke-dasharray: 62.17 282.6;
+      opacity: .22;
+    }
+    .circle-23 {
+      stroke-dasharray: 65.00 282.6;
+      opacity: .23;
+    }
+    .circle-24 {
+      stroke-dasharray: 67.82 282.6;
+      opacity: .24;
+    }
+    .circle-25 {
+      stroke-dasharray: 70.65 282.6;
+      opacity: .25;
+    }
+    .circle-26 {
+      stroke-dasharray: 73.48 282.6;
+      opacity: .26;
+    }
+    .circle-27 {
+      stroke-dasharray: 76.30 282.6;
+      opacity: .27;
+    }
+    .circle-28 {
+      stroke-dasharray: 79.13 282.6;
+      opacity: .28;
+    }
+    .circle-29 {
+      stroke-dasharray: 81.95 282.6;
+      opacity: .29;
+    }
+    .circle-30 {
+      stroke-dasharray: 84.78 282.6;
+      opacity: .3;
+    }
+    .circle-31 {
+      stroke-dasharray: 87.61 282.6;
+      opacity: .31;
+    }
+    .circle-32 {
+      stroke-dasharray: 90.43 282.6;
+      opacity: .32;
+    }
+    .circle-33 {
+      stroke-dasharray: 93.26 282.6;
+      opacity: .33;
+    }
+    .circle-34 {
+      stroke-dasharray: 96.08 282.6;
+      opacity: .34;
+    }
+    .circle-35 {
+      stroke-dasharray: 98.91 282.6;
+      opacity: .35;
+    }
+    .circle-36 {
+      stroke-dasharray: 101.74 282.6;
+      opacity: .36;
+    }
+    .circle-37 {
+      stroke-dasharray: 104.56 282.6;
+      opacity: .37;
+    }
+    .circle-38 {
+      stroke-dasharray: 107.39 282.6;
+      opacity: .38;
+    }
+    .circle-39 {
+      stroke-dasharray: 110.21 282.6;
+      opacity: .39;
+    }
+    .circle-40 {
+      stroke-dasharray: 113.04 282.6;
+      opacity: .4;
+    }
+    .circle-41 {
+      stroke-dasharray: 115.87 282.6;
+      opacity: .41;
+    }
+    .circle-42 {
+      stroke-dasharray: 118.69 282.6;
+      opacity: .42;
+    }
+    .circle-43 {
+      stroke-dasharray: 121.52 282.6;
+      opacity: .43;
+    }
+    .circle-44 {
+      stroke-dasharray: 124.34 282.6;
+      opacity: .44;
+    }
+    .circle-45 {
+      stroke-dasharray: 127.17 282.6;
+      opacity: .45;
+    }
+    .circle-46 {
+      stroke-dasharray: 130.0 282.6;
+      opacity: .46;
+    }
+    .circle-47 {
+      stroke-dasharray: 132.82 282.6;
+      opacity: .47;
+    }
+    .circle-48 {
+      stroke-dasharray: 135.65 282.6;
+      opacity: .48;
+    }
+    .circle-49 {
+      stroke-dasharray: 138.47 282.6;
+      opacity: .49;
+    }
+    .circle-50 {
+      stroke-dasharray: 141.3 282.6;
+      opacity: .5;
+    }
+    .circle-51 {
+      stroke-dasharray: 144.13 282.6;
+      opacity: .51;
+    }
+    .circle-52 {
+      stroke-dasharray: 146.95 282.6;
+      opacity: .52;
+    }
+    .circle-53 {
+      stroke-dasharray: 149.78 282.6;
+      opacity: .53;
+    }
+    .circle-54 {
+      stroke-dasharray: 152.60 282.6;
+      opacity: .54;
+    }
+    .circle-55 {
+      stroke-dasharray: 155.43 282.6;
+      opacity: .55;
+    }
+    .circle-56 {
+      stroke-dasharray: 158.26 282.6;
+      opacity: .56;
+    }
+    .circle-57 {
+      stroke-dasharray: 161.08 282.6;
+      opacity: .57;
+    }
+    .circle-58 {
+      stroke-dasharray: 163.91 282.6;
+      opacity: .58;
+    }
+    .circle-59 {
+      stroke-dasharray: 166.73 282.6;
+      opacity: .59;
+    }
+    .circle-60 {
+      stroke-dasharray: 169.56 282.6;
+      opacity: .6;
+    }
+    .circle-61 {
+      stroke-dasharray: 172.39 282.6;
+      opacity: .61;
+    }
+    .circle-62 {
+      stroke-dasharray: 175.21 282.6;
+      opacity: .62;
+    }
+    .circle-63 {
+      stroke-dasharray: 178.04 282.6;
+      opacity: .63;
+    }
+    .circle-64 {
+      stroke-dasharray: 180.86 282.6;
+      opacity: .64;
+    }
+    .circle-65 {
+      stroke-dasharray: 183.69 282.6;
+      opacity: .65;
+    }
+    .circle-66 {
+      stroke-dasharray: 186.52 282.6;
+      opacity: .66;
+    }
+    .circle-67 {
+      stroke-dasharray: 189.34 282.6;
+      opacity: .67;
+    }
+    .circle-68 {
+      stroke-dasharray: 192.17 282.6;
+      opacity: .68;
+    }
+    .circle-69 {
+      stroke-dasharray: 194.99 282.6;
+      opacity: .69;
+    }
+    .circle-70 {
+      stroke-dasharray: 197.82 282.6;
+      opacity: .7;
+    }
+    .circle-71 {
+      stroke-dasharray: 200.65 282.6;
+      opacity: .71;
+    }
+    .circle-72 {
+      stroke-dasharray: 203.47 282.6;
+      opacity: .72;
+    }
+    .circle-73 {
+      stroke-dasharray: 206.30 282.6;
+      opacity: .73;
+    }
+    .circle-74 {
+      stroke-dasharray: 209.12 282.6;
+      opacity: .74;
+    }
+    .circle-75 {
+      stroke-dasharray: 211.95 282.6;
+      opacity: .75;
+    }
+    .circle-76 {
+      stroke-dasharray: 214.78 282.6;
+      opacity: .76;
+    }
+    .circle-77 {
+      stroke-dasharray: 217.60 282.6;
+      opacity: .77;
+    }
+    .circle-78 {
+      stroke-dasharray: 220.43 282.6;
+      opacity: .78;
+    }
+    .circle-79 {
+      stroke-dasharray: 223.25 282.6;
+      opacity: .79;
+    }
+    .circle-80 {
+      stroke-dasharray: 226.08 282.6;
+      opacity: .8;
+    }
+    .circle-81 {
+      stroke-dasharray: 228.91 282.6;
+      opacity: .81;
+    }
+    .circle-82 {
+      stroke-dasharray: 231.73 282.6;
+      opacity: .82;
+    }
+    .circle-83 {
+      stroke-dasharray: 234.56 282.6;
+      opacity: .83;
+    }
+    .circle-84 {
+      stroke-dasharray: 237.38 282.6;
+      opacity: .84;
+    }
+    .circle-85 {
+      stroke-dasharray: 240.21 282.6;
+      opacity: .85;
+    }
+    .circle-86 {
+      stroke-dasharray: 243.04 282.6;
+      opacity: .86;
+    }
+    .circle-87 {
+      stroke-dasharray: 245.86 282.6;
+      opacity: .87;
+    }
+    .circle-88 {
+      stroke-dasharray: 248.69 282.6;
+      opacity: .88;
+    }
+    .circle-89 {
+      stroke-dasharray: 251.51 282.6;
+      opacity: .89;
+    }
+    .circle-90 {
+      stroke-dasharray: 254.34 282.6;
+      opacity: .9;
+    }
+    .circle-95 {
+      stroke-dasharray: 268.47 282.6;
+      opacity: .95;
+    }
+    .circle-96 {
+      stroke-dasharray: 271.30 282.6;
+      opacity: .96;
+    }
+    .circle-97 {
+      stroke-dasharray: 274.12 282.6;
+      opacity: .97;
+    }
+    .circle-98 {
+      stroke-dasharray: 276.95 282.6;
+      opacity: .98;
+    }
+    .circle-99 {
+      stroke-dasharray: 279.77 282.6;
+      opacity: .99;
+    }
+    .circle-100 {
+      stroke-dasharray: 282.6 282.6;
+      opacity: 1;
+    }
+  }
+}
+
+.skill__circle{
+  fill: none;
+  stroke-width: 15;
+}
+
+.skill__name{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00bea4;
+  max-width: 65%;
+  overflow: hidden;
+}
+
+.skill__circle-first{
+  fill: none;
+  stroke: #ccc;
+}
+
+.skill__circle-second{
+  stroke: #00bea4;
+  stroke-linecap: round;
+  stroke-dasharray: 0 282.6;
+  transition: $transition;
+}
+
+.last{
+  width: 100%;
+  height: 925px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+#map{
+  width: 100%;
+  height: 100%;
+}
+
+.information{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: rgba(#fcfcfc,.85);
+  border-radius: 8px;
+  color: rgb(55,62,66);
+  min-width: 380px;
+  overflow: hidden;
+  z-index: 2;
+
+  @include tablets{
+    top:40%;
+    transform: translate(-50%, -40%);
+  }
+
+  @include phones{
+    position: static;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+}
+
+.contacts-socials{
+  padding: 0 40px 40px;
+  color: rgba(55,62,66, .8);
+}
+
+.contacts-socials__list{
+  text-align: left;
+}
+
+.contacts-socials__item{
+
+  &:not(:first-child){
+    margin-top: 20px;
+  }
+}
+
+.contacts-socials__icon{
+  font-size: 24px;
+  color: #00bea4;
+  margin-right: 8px;
+}
+
+.contacts-socials__text{
+  display:inline-block;
+}

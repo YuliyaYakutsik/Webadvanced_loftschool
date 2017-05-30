@@ -1,0 +1,76 @@
+$transition: .5s;
+$background: url('../img/mountains.jpg');
+$footer: 110px;
+$footer_tablets: 230px;
+$white : #efeee9;
+$beige: #eeebdf;
+$main-font-color : #455a64;
+$bg : rgb(250, 248, 240);
+$green: #00bfa5;
+
+@mixin laptop(){
+	@media screen and (max-width:1200px){
+		@content;
+	}
+}
+
+@mixin tablets(){
+	@media screen and (max-width:770px){
+		@content;
+	}
+}
+
+@mixin tabletssmall(){
+	@media screen and (max-width:660px){
+		@content;
+	}
+}
+
+@mixin phones(){
+	@media screen and (max-width:380px){
+		@content;
+	}
+}
+
+@mixin album(){
+	@media screen and (orientation:landscape) and (max-width:770px){
+		@content;
+	}
+}
+
+%clearfix{
+	&:after, &:before{
+		content:"";
+		display: block;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+%wrapper{
+	&:after{
+		content: "";
+		display: block;
+		height: $footer;
+
+		@include tablets{
+    		height: $footer_tablets;
+    	}
+	}
+}
+
+//layout setups
+@import 'layout/fonts';
+@import 'layout/font-awesome';
+
+//blocks setups
+@import 'common/style';
+
+//pages setups
+@import 'common/index';
+@import 'common/header';
+@import 'common/footer';
+@import 'common/blog';
+@import 'common/about';
+@import 'common/works';

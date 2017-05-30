@@ -1,0 +1,151 @@
+.footer__pages{
+	height: $footer;
+	margin-top: -$footer;
+	background: rgba(#373e42, .85);
+	text-align: center;
+	display: flex;
+    flex-direction: column;
+
+	@include tablets{
+    	height: $footer_tablets;
+		margin-top: -$footer_tablets;
+    }
+}
+
+.footer_margin_top{
+	height: 110px;
+    position: absolute;
+    right: 0;
+    background: rgba(#373e42, .85);
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include tablets{
+    	height: $footer_tablets;
+    }
+}
+
+.footer-up{
+	@extend %clearfix;
+	padding: 5px 20px;
+	display: flex;
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    justify-content: flex-start;
+
+    @include tablets{
+		flex-direction: column;
+	}
+
+	&__left{
+		text-align: left;
+
+  		@include tablets{
+    		text-align: center;
+  		}
+	}
+
+	&__right{
+		margin-left: auto;
+
+    	@include tablets{
+    		margin-left: 0;
+  		}
+	}
+
+	&__item{
+		display: inline-block;
+		&:not(:first-child){
+			margin-left: 20px;
+		}
+	}
+
+	&__link{
+		display: block;
+		padding: 10px 0;
+		font-size: 15.96px;
+		transition: $transition;
+
+		&:hover, &_active{
+			color: $green;
+		}
+	}
+}
+
+.socials_place_footer{
+	margin-bottom: 0;
+
+	.socials__item:not(:first-child){
+		padding-left: 10px
+	}
+}
+
+.socials__list_border_circle{
+	.fa{
+		position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -55%);
+    	color: rgba(242, 243, 244, 0.8);
+	}
+
+	.socials__link{
+		width: 38px;
+		height: 38px;
+		display: inline-block;
+		text-align: center;
+	    border: 1px solid rgba(242, 243, 244, 0.8);
+	    border-radius: 50%;
+	    position: relative;
+	    transition: $transition;
+
+	    &:hover{
+	    	background: #fff;
+	    	border: 1px solid #fff;
+
+	    	.fa{
+	    		color: rgba(#373e42, .85)
+	    	}
+	    }
+	}
+}
+
+.footer-down{
+	padding: 5px 20px;
+	color: rgba(242, 243, 244, 0.8);
+	font-family: 'robotolight', Arial, sans-serif;
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include tablets{
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	&__right{
+		text-align: right;
+
+    	@include tablets{
+    		text-align: center;
+    	}
+	}
+}
+
+.footer__description{
+	color: rgb(125, 130, 132);
+	text-align: left;
+
+	@include tablets{
+    	max-width: 100%;
+    	text-align: center;
+    }
+}
+
+.copyright_position_left{
+	padding: 0;
+	color: rgb(133, 148, 148); 
+}
