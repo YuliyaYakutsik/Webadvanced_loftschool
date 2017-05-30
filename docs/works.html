@@ -8,10 +8,11 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <script src="assets/js/foundation.js" defer></script>
-    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <link rel="shortcut icon" href="assets/img/fav_mount.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/foundation.min.css">
+    <link rel="stylesheet" href="assets/css/app.min.css">
+    <script src="assets/js/foundation.min.js" defer></script>
+    <script src="assets/js/app.min.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -23,6 +24,8 @@
     </div>
     <div class="wrapper_with_footer">
       <div class="fullscreen-menu">
+        <div class="fullscreen-menu__section fullscreen-menu__section_left"></div>
+        <div class="fullscreen-menu__section fullscreen-menu__section_right"></div>
         <ul class="fullscreen-menu__list">
           <li class="fullscreen-menu__item"><a class="fullscreen-menu__link active" href="works.html">
               <div class="title__small title__small_fullscreen_menu">Мои работы</div></a></li>
@@ -35,6 +38,7 @@
         </ul>
       </div>
       <div class="header">
+        <div class="header__bg"><img class="header__bg-image" src="assets/img/mountains.jpg"></div>
         <div class="header__input">
           <div class="pages__container">
             <div class="header-up">
@@ -43,7 +47,7 @@
                   <ul class="socials__list socials__list_color_white">
                     <li class="socials__item"><a class="socials__link" href="https://vk.com/julia_yakutik" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
                     <li class="socials__item"><a class="socials__link" href="https://github.com/YuliyaYakutsik" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
-                    <li class="socials__item"><a class="socials__link" href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com/in/yuliya-yakutsik-b10aa4139/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -51,16 +55,14 @@
                 <div class="burger-menu"><a class="burger-menu__link" href="#"><span class="burger-menu__link-center"></span></a></div>
               </div>
             </div>
-          </div><a class="down-arrow" href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-          <div class="header-without-triangles">
-            <div class="header__title"><img class="header__title-img" src="assets/img/portfolio-header.png" alt="">
-              <div class="user user_position_header">
-                <div class="user__photo user__photo_small"><img class="user__pic" src="assets/img/ava.jpg" alt="Ava"></div>
-                <div class="user__name user__name_color_white">Юлия Якутик</div>
-                <div class="user__description user__description_color_white">Личный сайт веб-разработчика</div>
-              </div>
-            </div>
           </div>
+          <div class="header__description"><img class="header__title-img" src="assets/img/portfolio-header.png" alt="">
+            <div class="user user_position_header">
+              <div class="user__photo user__photo_small"><img class="user__pic" src="assets/img/ava.jpg" alt="Ava"></div>
+              <div class="user__name user__name_color_white">Юлия Якутик</div>
+              <div class="user__description user__description_color_white">Личный сайт веб-разработчика</div>
+            </div>
+          </div><a class="down-arrow" href=""><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
         </div>
       </div>
       <section class="section works slider">
@@ -78,7 +80,7 @@
                   <div class="workds__techologies">
                     <div class="works__technologies-desc">HTML, CSS</div>
                   </div>
-                  <div class="works__link"><a class="works__button" href="https://loftschool.com/"><i class="fa fa-link" aria-hidden="true"> </i>
+                  <div class="works__link"><a class="works__button" href="https://loftschool.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"> </i>
                       <div class="works__button-text">Посмотреть сайт</div></a></div>
                 </li>
                 <li class="works__item active">
@@ -86,7 +88,7 @@
                   <div class="workds__techologies">
                     <div class="works__technologies-desc">HTML, CSS, JavaScript</div>
                   </div>
-                  <div class="works__link"><a class="works__button" href="https://loftschool.com/"><i class="fa fa-link" aria-hidden="true"> </i>
+                  <div class="works__link"><a class="works__button" href="https://loftschool.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"> </i>
                       <div class="works__button-text">Посмотреть сайт</div></a></div>
                 </li>
                 <li class="works__item">
@@ -94,7 +96,7 @@
                   <div class="workds__techologies">
                     <div class="works__technologies-desc">HTML, CSS, JavaScript, JQuery</div>
                   </div>
-                  <div class="works__link"><a class="works__button" href="https://loftschool.com/"><i class="fa fa-link" aria-hidden="true"> </i>
+                  <div class="works__link"><a class="works__button" href="https://loftschool.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"> </i>
                       <div class="works__button-text">Посмотреть сайт</div></a></div>
                 </li>
                 <li class="works__item">
@@ -102,7 +104,7 @@
                   <div class="workds__techologies">
                     <div class="works__technologies-desc">HTML, CSS, JavaScript, JQuery, PHP</div>
                   </div>
-                  <div class="works__link"><a class="works__button" href="https://loftschool.com/"><i class="fa fa-link" aria-hidden="true"> </i>
+                  <div class="works__link"><a class="works__button" href="https://loftschool.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"> </i>
                       <div class="works__button-text">Посмотреть сайт</div></a></div>
                 </li>
               </ul>
@@ -138,7 +140,7 @@
           <ul class="reviews__list">
             <li class="reviews__item"><i class="fa fa-quote-left reviews__item-quote" aria-hidden="true"></i>
               <div class="reviews__item-text">
-                 Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+                 Юля проходила обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
               <div class="reviews__item-person">
                 <div class="reviews-person__photo"><img class="reviews-person__photo-pic" src="assets/img/teacher.jpg"></div>
                 <div class="reviews__item-person-block">
@@ -172,6 +174,7 @@
             <div class="write-me__form-wrapper">
               <div class="title__small about__section-title_small">Связаться со мной</div>
               <form class="reviews__form" id="reviews__form" method="POST">
+                <div class="reviews__form-status status"></div>
                 <div class="reviews__form-inputs">
                   <input class="reviews__form-input reviews__form-element" name="name" type="text" id="sendName" placeholder="Имя">
                   <input class="reviews__form-input reviews__form-element" name="email" type="email" id="sendEmail" placeholder="Email">
@@ -214,7 +217,7 @@
                 <ul class="socials__list socials__list_border_circle">
                   <li class="socials__item"><a class="socials__link" href="https://vk.com/julia_yakutik" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
                   <li class="socials__item"><a class="socials__link" href="https://github.com/YuliyaYakutsik" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
-                  <li class="socials__item"><a class="socials__link" href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com/in/yuliya-yakutsik-b10aa4139/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
               </div>
             </div>

@@ -8,10 +8,11 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <script src="assets/js/foundation.js" defer></script>
-    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <link rel="shortcut icon" href="assets/img/fav_mount.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/foundation.min.css">
+    <link rel="stylesheet" href="assets/css/app.min.css">
+    <script src="assets/js/foundation.min.js" defer></script>
+    <script src="assets/js/app.min.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -42,14 +43,14 @@
                 <div class="user__author">
                   <div class="user__photo"><img class="user__pic" src="assets/img/ava.jpg" alt="Ava"></div>
                   <div class="user__name">Юлия Якутик</div>
-                  <div class="user__description">Личный сайт веб разработчика</div>
+                  <div class="user__description">Личный сайт веб-разработчика</div>
                 </div>
               </div>
               <div class="socials socials_place_main">
                 <ul class="socials__list socials__list_color_green">
                   <li class="socials__item"><a class="socials__link" href="https://vk.com/julia_yakutik" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
                   <li class="socials__item"><a class="socials__link" href="https://github.com/YuliyaYakutsik" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
-                  <li class="socials__item"><a class="socials__link" href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com/in/yuliya-yakutsik-b10aa4139/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -63,8 +64,9 @@
           </div>
           <div class="content content_flipper_back">
             <div class="content__index content__index_flipper_back">
-              <form class="authorization__form" method="POST">
+              <form class="authorization__form" id="login" method="POST">
                 <div class="title__small title__small_flipper_back">Авторизуйтесь</div>
+                <div class="status reviews__form-status"></div>
                 <div class="authorization__form-inputs">
                   <label class="authorization__form-block">
                     <div class="authorization__form-block-wrapper">
