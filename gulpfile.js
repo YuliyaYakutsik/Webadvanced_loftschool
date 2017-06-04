@@ -1,7 +1,7 @@
 'use strict';
 
 global.$ = {
-  dev: true,
+  dev: false,
   package: require('./package.json'),
   config: require('./gulp/config'),
   path: {
