@@ -196,6 +196,11 @@
     .slider__button{
       color: #fff;
       font-size: 40px;
+
+      @include tabletssmall{
+        font-size: 64px;
+        color: rgba(#fff, 1);
+      }
     }
   }
 }
@@ -211,7 +216,7 @@
   transition: $transition;
 
   @include tabletssmall{
-    font-size: 64px;
+    font-size: 48px;
     color: rgba(#fff, 1);
   }
 }
@@ -324,7 +329,7 @@
 
 .write-me{
   color: #373e42;
-  width: 26rem;
+  max-width: 26rem;
   margin: 0 auto;
 }
 

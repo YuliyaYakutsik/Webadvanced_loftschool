@@ -232,7 +232,6 @@
           var reqLink = sideBarItem.filter('[href="#' + currentId + '"]');
 
           reqLink.closest('.nav-blog__item').addClass('active').siblings().removeClass('active');
-          sideBar.removeClass('active');
           $('.nav-blog__toggle-link').removeClass('active');
 
           window.location.hash = currentId;

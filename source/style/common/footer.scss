@@ -37,6 +37,7 @@
 
     @include tablets{
 		flex-direction: column;
+		align-items: center;
 	}
 
 	&__left{
@@ -45,6 +46,11 @@
   		@include tablets{
     		text-align: center;
   		}
+	}
+
+	&__list{
+		display: flex;
+		align-items: center;
 	}
 
 	&__right{

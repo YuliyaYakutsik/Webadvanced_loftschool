@@ -15,7 +15,7 @@ $green: #00bfa5;
 }
 
 @mixin tablets(){
-	@media screen and (max-width:770px){
+	@media screen and (max-width:790px){
 		@content;
 	}
 }
@@ -33,7 +33,7 @@ $green: #00bfa5;
 }
 
 @mixin album(){
-	@media screen and (orientation:landscape) and (max-width:770px){
+	@media screen and (orientation:landscape) and (max-width:790px){
 		@content;
 	}
 }
