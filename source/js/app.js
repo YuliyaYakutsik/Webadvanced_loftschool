@@ -1064,10 +1064,6 @@
       upArrow.init();  
     }
 
-    if($('.map').length){
-      initMap.init();  
-    }
-
     if($('.pages__container').length){
       myScrollParallax.init(); 
     }
@@ -1086,6 +1082,10 @@
 
     if($('#login').length){
       makeAuthorization.init();  
+    }
+
+    if($('.map').length){
+      initMap.init();  
     }
 
   });
