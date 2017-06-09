@@ -1,7 +1,7 @@
 {
-  "name": "loftschool-builder",
+  "name": "loftschool-project",
   "version": "1.0.0",
-  "author": "a.kalin",
+  "author": "Yuliya Yakutsik",
   "license": "ISC",
   "scripts": {},
   "devDependencies": {
